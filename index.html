@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In Loving Honor — A Life Story</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FDFBF7',
+                        warmGray: '#2C2A29',
+                        goldAccent: '#C5A059',
+                        softSand: '#F3EFEA'
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #FDFBF7; color: #2C2A29; }
+        h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="antialiased selection:bg-goldAccent selection:text-white">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full bg-cream/90 backdrop-blur-md z-40 border-b border-warmGray/10 px-6 py-4 transition-all">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="#" class="font-serif text-xl font-semibold tracking-wide text-warmGray">Life & Legacy</a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium tracking-wider text-warmGray/80">
+                <a href="#about" class="hover:text-goldAccent transition-colors">About</a>
+                <a href="#chapters" class="hover:text-goldAccent transition-colors">Chapters</a>
+                <a href="#gallery" class="hover:text-goldAccent transition-colors">Gallery</a>
+                <a href="#tributes" class="hover:text-goldAccent transition-colors">Tributes</a>
+                <a href="#guestbook" class="hover:text-goldAccent transition-colors">Guestbook</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen pt-24 pb-12 flex items-center justify-center px-6">
+        <div class="max-w-4xl mx-auto text-center space-y-8">
+            <div class="relative w-48 h-48 md:w-64 md:h-64 mx-auto rounded-full overflow-hidden border-4 border-goldAccent/40 shadow-2xl">
+                <!-- Replace with photo URL -->
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=600" alt="Portrait" class="w-full h-full object-cover">
+            </div>
+            <div class="space-y-4">
+                <span class="text-xs uppercase tracking-widest text-goldAccent font-semibold">An Extraordinary Journey</span>
+                <h1 class="text-4xl md:text-6xl font-normal leading-tight">Honoring the Life of <br><span class="italic font-serif text-goldAccent">[Name Goes Here]</span></h1>
+                <p class="text-sm md:text-base text-warmGray/70 max-w-xl mx-auto tracking-wide">1945 — 2024 • Beloved Parent, Mentor, & Visionary</p>
+            </div>
+            <blockquote class="italic font-serif text-lg md:text-xl text-warmGray/80 max-w-2xl mx-auto border-l-2 border-goldAccent pl-4 py-1">
+                "To live in hearts we leave behind is not to die."
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- About / Overview Section -->
+    <section id="about" class="py-20 bg-softSand px-6">
+        <div class="max-w-4xl mx-auto space-y-8">
+            <div class="text-center space-y-2">
+                <h2 class="text-3xl md:text-4xl">The Story at a Glance</h2>
+                <div class="w-12 h-0.5 bg-goldAccent mx-auto"></div>
+            </div>
+            <p class="text-base md:text-lg leading-relaxed text-warmGray/80 text-justify md:text-center">
+                This space is dedicated to celebrating a remarkable life defined by kindness, strength, and unwavering love. From humble beginnings to extraordinary achievements, their journey continues to inspire everyone who had the privilege of knowing them.
+            </p>
+        </div>
+    </section>
+
+    <!-- Interactive Life Chapters Section -->
+    <section id="chapters" class="py-20 px-6 max-w-5xl mx-auto">
+        <div class="text-center space-y-2 mb-12">
+            <h2 class="text-3xl md:text-4xl">Life Chapters</h2>
+            <p class="text-sm text-warmGray/60">Click through the eras to explore the story</p>
+        </div>
+
+        <!-- Chapter Tabs -->
+        <div class="flex justify-center space-x-2 md:space-x-4 border-b border-warmGray/10 pb-4 mb-8">
+            <button onclick="showChapter('ch1')" class="tab-btn font-serif px-4 py-2 text-sm md:text-base font-medium border-b-2 border-goldAccent text-warmGray" id="btn-ch1">Early Years</button>
+            <button onclick="showChapter('ch2')" class="tab-btn font-serif px-4 py-2 text-sm md:text-base font-medium border-b-2 border-transparent text-warmGray/60 hover:text-warmGray" id="btn-ch2">The Journey</button>
+            <button onclick="showChapter('ch3')" class="tab-btn font-serif px-4 py-2 text-sm md:text-base font-medium border-b-2 border-transparent text-warmGray/60 hover:text-warmGray" id="btn-ch3">Core Values</button>
+        </div>
+
+        <!-- Chapter Content -->
+        <div class="bg-white p-8 md:p-12 rounded-2xl border border-warmGray/10 shadow-sm min-h-[250px]">
+            <div id="ch1" class="chapter-content space-y-4">
+                <h3 class="text-2xl font-serif text-goldAccent">Early Roots & Childhood</h3>
+                <p class="text-warmGray/80 leading-relaxed">Born and raised in [Location], early life was marked by curiosity, family traditions, and a passion for learning. These formative years laid the bedrock for a lifetime of resilience and warmth.</p>
+            </div>
+            <div id="ch2" class="chapter-content space-y-4 hidden">
+                <h3 class="text-2xl font-serif text-goldAccent">Crossroads & Achievements</h3>
+                <p class="text-warmGray/80 leading-relaxed">Building a career and a family came with distinct challenges and victories. Whether mentoring others or embarking on personal endeavors, every milestone was met with optimism and dedication.</p>
+            </div>
+            <div id="ch3" class="chapter-content space-y-4 hidden">
+                <h3 class="text-2xl font-serif text-goldAccent">Enduring Wisdom</h3>
+                <p class="text-warmGray/80 leading-relaxed">Believed deeply in generosity, patience, and living each day with purpose. Their guidance lives on through the lives they touched and the legacy they built.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section id="gallery" class="py-20 bg-softSand px-6">
+        <div class="max-w-6xl mx-auto space-y-12">
+            <div class="text-center space-y-2">
+                <h2 class="text-3xl md:text-4xl">Memory Gallery</h2>
+                <div class="w-12 h-0.5 bg-goldAccent mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="group relative aspect-square overflow-hidden rounded-xl bg-warmGray/10 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&q=80&w=600" alt="Family" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-warmGray/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4 text-white text-sm">Family Gatherings</div>
+                </div>
+                <div class="group relative aspect-square overflow-hidden rounded-xl bg-warmGray/10 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=600" alt="Travel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-warmGray/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4 text-white text-sm">Adventures & Travel</div>
+                </div>
+                <div class="group relative aspect-square overflow-hidden rounded-xl bg-warmGray/10 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=600" alt="Work" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-warmGray/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4 text-white text-sm">Life's Work</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tributes Section -->
+    <section id="tributes" class="py-20 px-6 max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl mb-12">Words From Loved Ones</h2>
+        <div class="grid md:grid-cols-2 gap-8 text-left">
+            <div class="bg-white p-6 rounded-xl border border-warmGray/10 space-y-4">
+                <p class="italic text-warmGray/80">"A true beacon of light. Always knew how to bring out the best in everyone around them."</p>
+                <div class="text-xs font-semibold uppercase tracking-wider text-goldAccent">— Sarah M. (Family Friend)</div>
+            </div>
+            <div class="bg-white p-6 rounded-xl border border-warmGray/10 space-y-4">
+                <p class="italic text-warmGray/80">"Taught me everything I know about patience and integrity. Forever grateful for their guidance."</p>
+                <div class="text-xs font-semibold uppercase tracking-wider text-goldAccent">— David K. (Colleague)</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guestbook Form Section -->
+    <section id="guestbook" class="py-20 bg-softSand px-6">
+        <div class="max-w-2xl mx-auto space-y-8">
+            <div class="text-center space-y-2">
+                <h2 class="text-3xl md:text-4xl">Share a Memory</h2>
+                <p class="text-sm text-warmGray/70">Leave a note, tribute, or personal story for the family.</p>
+            </div>
+
+            <form class="bg-white p-8 rounded-2xl border border-warmGray/10 space-y-6 shadow-sm">
+                <div>
+                    <label class="block text-xs uppercase font-semibold text-warmGray/70 mb-2">Your Name</label>
+                    <input type="text" placeholder="Jane Doe" class="w-full px-4 py-3 rounded-lg border border-warmGray/20 focus:outline-none focus:border-goldAccent text-sm">
+                </div>
+                <div>
+                    <label class="block text-xs uppercase font-semibold text-warmGray/70 mb-2">Your Message or Memory</label>
+                    <textarea rows="4" placeholder="Write your tribute here..." class="w-full px-4 py-3 rounded-lg border border-warmGray/20 focus:outline-none focus:border-goldAccent text-sm"></textarea>
+                </div>
+                <button type="button" onclick="alert('Thank you for sharing your memory!')" class="w-full bg-warmGray text-cream py-3 rounded-lg font-medium text-sm hover:bg-goldAccent transition-colors">Submit Tribute</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-xs text-warmGray/50 border-t border-warmGray/10">
+        Created with love in honor of a cherished life.
+    </footer>
+
+    <!-- Interactive Script -->
+    <script>
+        function showChapter(chapterId) {
+            // Hide all content
+            document.querySelectorAll('.chapter-content').forEach(el => el.classList.add('hidden'));
+            // Remove active style from all buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('border-goldAccent');
+                btn.classList.add('border-transparent', 'text-warmGray/60');
+            });
+
+            // Show selected content
+            document.getElementById(chapterId).classList.remove('hidden');
+            // Style active button
+            const activeBtn = document.getElementById('btn-' + chapterId);
+            activeBtn.classList.remove('border-transparent', 'text-warmGray/60');
+            activeBtn.classList.add('border-goldAccent');
+        }
+    </script>
+</body>
+</html>
