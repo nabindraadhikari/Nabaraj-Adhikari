@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life & Legacy — Nabindra the Coder Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand">Nabindra the Coder</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#chapters">Chapters</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#tributes">Tributes</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-container">
+            <div class="profile-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=600" alt="Profile Portrait" class="profile-img">
+            </div>
+            <span class="subtitle">An Extraordinary Journey</span>
+            <h1>Honoring the Life of <br><span class="italic font-serif gold-text">[Name Goes Here]</span></h1>
+            <p class="years">1945 — 2026 • Beloved Parent, Mentor, & Visionary</p>
+            <blockquote class="quote">
+                "To live in hearts we leave behind is not to die."
+            </blockquote>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section section-alt">
+        <div class="container text-center">
+            <h2>The Story at a Glance</h2>
+            <div class="divider"></div>
+            <p class="lead-text">
+                This space is dedicated to celebrating a remarkable life defined by kindness, strength, and unwavering love. From humble beginnings to extraordinary achievements, their journey continues to inspire everyone who had the privilege of knowing them.
+            </p>
+        </div>
+    </section>
+
+    <!-- Interactive Chapters Section -->
+    <section id="chapters" class="section container">
+        <div class="text-center">
+            <h2>Life Chapters</h2>
+            <p class="subtext">Click through the eras to explore the story</p>
+        </div>
+
+        <div class="tab-buttons">
+            <button onclick="showChapter('ch1')" class="tab-btn active" id="btn-ch1">Early Years</button>
+            <button onclick="showChapter('ch2')" class="tab-btn" id="btn-ch2">The Journey</button>
+            <button onclick="showChapter('ch3')" class="tab-btn" id="btn-ch3">Core Values</button>
+        </div>
+
+        <div class="tab-card">
+            <div id="ch1" class="chapter-content">
+                <h3>Early Roots & Childhood</h3>
+                <p>Born and raised in [Location], early life was marked by curiosity, family traditions, and a passion for learning. These formative years laid the bedrock for a lifetime of resilience and warmth.</p>
+            </div>
+            <div id="ch2" class="chapter-content hidden">
+                <h3>Crossroads & Achievements</h3>
+                <p>Building a career and a family came with distinct challenges and victories. Whether mentoring others or embarking on personal endeavors, every milestone was met with optimism and dedication.</p>
+            </div>
+            <div id="ch3" class="chapter-content hidden">
+                <h3>Enduring Wisdom</h3>
+                <p>Believed deeply in generosity, patience, and living each day with purpose. Their guidance lives on through the lives they touched and the legacy they built.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Coded by <strong>Nabindra the Coder</strong> — Created with love in honor of a cherished life.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
